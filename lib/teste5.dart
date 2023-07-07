@@ -1,7 +1,5 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:graphite/graphite.dart';
 import 'package:render_metrics/render_metrics.dart';
 import 'dart:math' as math;
 
@@ -45,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       print(soma += i);
     }
     return Scaffold(
-      body: Center(
+      body: SingleChildScrollView(
         child: Stack(
           children: [
             for (var i = 0; i < data.length + 1; i++) ...{
@@ -84,15 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     })
               }
             },
-            SizedBox(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: genWidTest(data),
-                ),
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: genWidTest(data),
             )
           ],
         ),
