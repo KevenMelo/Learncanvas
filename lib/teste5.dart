@@ -38,10 +38,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    int soma = 0;
-    for (var i = 1; i < 1000; i++) {
-      print(soma += i);
-    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
